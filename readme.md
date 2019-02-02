@@ -17,7 +17,10 @@ The purpose of the image created by this Dockerfile is to:
 	 - To persist db data, create a subdirectory called /datadir
  5. Run docker-compose up
 	 - It is assumed that the /app repo has the appropriate docker-compose file referencing the web-app-builder image.
- 6. Connect to the running web server and run necessary commands with CLI tools like composer, npm, artisan to build the app.
+ 6. Connect to a running service and execute the necessary commands:
+ 	  - With the web server you might use CLI tools like composer, npm, artisan to build the app.
+	  - With the db server you might initial data
+	  - To connect to a service via the shell try 'docker exec -ti container_name bash'
  7. Create a hosts file entry to view the running app in a browser.
  8. Develop/ write code as normal in the working directory of the host, committing valid updates to the repo.
 
